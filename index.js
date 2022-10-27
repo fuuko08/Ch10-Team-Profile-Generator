@@ -84,7 +84,7 @@ function appInit() {
                 {
                     type: 'input',
                     name: 'managerOfficeNumber',
-                    message: "Enter the manager's office number",
+                    message: "Enter the manager's office",
                     validate: (answer) => {
                         if (answer !== '') {
                             return true;

@@ -25,7 +25,7 @@ function appInit() {
                 {
                     type: 'list',
                     message: 'Would you like to add an intern or engineer to your team?',
-                    name: 'add',
+                    name: 'memberChoice',
                     choices: ["Engineer", "Intern", "None"]
                 }
             ])
@@ -69,7 +69,29 @@ function appInit() {
                         }
                         return 'Please enter a number.'
                     }
-                }
+                },
+                {
+                    type: 'input',
+                    name: 'managerEmail',
+                    message: "Enter the manager's email address",
+                    validate: (answer) => {
+                        if (answer !== '') {
+                            return true;
+                        }
+                        return 'Please enter a character.';
+                    },
+                },
+                {
+                    type: 'input',
+                    name: 'managerOfficeNumber',
+                    message: "Enter the manager's office number",
+                    validate: (answer) => {
+                        if (answer !== '') {
+                            return true;
+                        }
+                        return 'Please enter a character.';
+                    },
+                },
             ])
             .then((answers) => {
                 const manager = new Manager(

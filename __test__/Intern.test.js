@@ -14,7 +14,7 @@ test("Creating intern's school.", () => {
 test("Checking if the function getSchool() works", () => {
     const testSchool = "UCLA";
     const e = new Intern("Selina", 10, "test@test.com", testSchool);
-    expect(e.getSchool()).tobe(testSchool);
+    expect(e.getSchool()).toBe(testSchool);
 });
 
 test("Checking if the function getRole() works", () => {

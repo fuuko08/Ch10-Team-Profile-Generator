@@ -1,10 +1,8 @@
-const { default: test } = require('node:test');
-const { TestScheduler } = require('rxjs/testing');
 const Employee = require('../lib/Employee');
 
 test("Creating the new employee card.", () => {
     const e = new Employee();
-    expect (typeOf(e)).toBe("object");
+    expect (typeof(e)).toBe("object");
 });
 
 test("Creating employee's name.", () => {

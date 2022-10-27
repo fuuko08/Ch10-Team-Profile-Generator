@@ -1,4 +1,3 @@
-const { default: test } = require('node:test');
 const Engineer = require('../lib/Engineer');
 
 test("Creating the new Engineer card.", () => {
@@ -15,7 +14,7 @@ test("Creating engineer's github.", () => {
 test("Checking if the function getGithub() works", () => {
     const testGithub = "fuuko08";
     const e = new Engineer("Selina", 10, "test@test.com", testGithub);
-    expect(e.getGithub()).tobe(testGithub);
+    expect(e.getGithub()).toBe(testGithub);
 });
 
 test("Checking if the function getRole() works", () => {
